@@ -19,3 +19,15 @@ This plugin will automatically feed you completions for the local-most Capfile,
 updating them either when that file changes
 or if you call `zap_cap_cache`
 (for instance, because you needed to update `lib/ill_advised_server_management.rb`.)
+
+# Doesn't work on OS X?
+
+OS X doesn't have an md5sum command, but you can easily emulate it for purposes
+of this plugin by using:
+
+```
+function md5sum
+  md5
+end
+funcsave md5sum
+```
